@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Welcome to Search Weather</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+    <div class="container position-relative justify-content-center">
+      <div class="collapse navbar-collapse">
+        <span style="font-size:30px;cursor:pointer;color:#fff" onclick="openNav()">&#9776;</span>
+      </div>
+      @Html.ActionLink("Search Weather", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    </div>
+  </nav>
+
+  <div id="mySidenav" class="side-navbar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul class="navbar-nav flex-grow-1">
+      <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+      <li>@Html.ActionLink("Register", "Register", "Account", new { area = "" }, new { @class = "nav-link" })</li>
+      <li>@Html.ActionLink("Login", "Login", "Account", new { area = "" }, new { @class = "nav-link" })</li>
+    </ul>
+    @if (Session["Email"] != null)
+    {
+      <a href="@Url.Action("Logout","Account")" class="btn btn-secondary small mt-5 mx-auto">Logout</a>
+    }
+  </div>
+
+  <div class="container body-content">
+    @RenderBody()
+    <hr class="my-5" />
+    <footer>
+      <p>&copy; @DateTime.Now.Year - Search Weather</p>
+    </footer>
+  </div>
+
+  @Scripts.Render("~/bundles/jquery")
+  @Scripts.Render("~/bundles/bootstrap")
+  @Scripts.Render("~/bundles/Custom")
+  @RenderSection("scripts", required: false)
+</body>
+</html>

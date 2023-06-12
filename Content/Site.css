@@ -1,0 +1,151 @@
+﻿/* Set padding to keep content from hitting the edges */
+body {
+    background-repeat: no-repeat;
+    color: #fff;
+    background: linear-gradient(0.3deg, rgb(0, 0, 0) -5.4%, rgb(187,41,61) 98.7%);
+}
+
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.navbar {
+    background-color: #BB293D;
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-top: 40px;
+}
+
+.form-control {
+    width: 100%;
+    border-radius: 30px;
+    outline: none !important;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: none;
+    -webkit-backdrop-filter: blur(5px);
+    /*border: 1px solid rgba(255, 255, 255, 0.3);*/
+    color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+    .get-weather-page, .home-page, .results-page {
+        min-height: 80vh;
+    }
+}
+
+.home-page__container a {
+    color: #fff;
+}
+
+.results-page span {
+    font-size: 14px;
+    color: #818181;
+}
+
+label {
+    margin-bottom: 15px;
+}
+
+.btn {
+    border-radius: 30px;
+    border-color: transparent;
+    min-width: 180px;
+    font-size: 1rem !important;
+}
+
+    .btn.small {
+        width: 130px;
+    }
+
+    .btn.btn-primary {
+        background-color: #019875;
+    }
+
+        .btn.btn-primary:hover {
+            border-color: #019875;
+            color: #019875;
+            background-color: transparent;
+        }
+
+    .btn.btn-secondary {
+        background-color: transparent;
+        border-color: #019875;
+        color: #019875;
+    }
+
+        .btn.btn-secondary:hover {
+            background-color: #019875;
+            color: #fff;
+        }
+
+.navbar-collapse {
+    position: absolute;
+    left: 0;
+}
+
+.side-navbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+    .side-navbar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .side-navbar a:hover {
+            color: #f1f1f1;
+        }
+
+    .side-navbar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+@media screen and (max-height: 450px) {
+    .side-navbar {
+        padding-top: 15px;
+    }
+
+        .side-navbar a {
+            font-size: 18px;
+        }
+}

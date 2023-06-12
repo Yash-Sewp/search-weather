@@ -1,0 +1,26 @@
+﻿@model Search_Weather.Models.Weather
+
+@{
+  ViewBag.Title = "Results";
+}
+
+<div class="row justify-content-md-start">
+  <div class="col-12 mt-5">
+    <h2>Weather Report</h2>
+    <hr />
+  </div>
+  <div class="col-md-12 results-page d-flex">
+    <div class="form-group">
+      <span>City: </span>@Model.CityName.ToUpper()
+
+      <hr />
+
+      <span>Current Temperature: </span>@Model.Temp °C
+
+      <hr />
+
+      <span>Zip Code: </span>@Model.ZipCode
+    </div>
+  </div>
+</div>
+
