@@ -157,6 +157,10 @@
     <Compile Include="Migrations\202306111839216_InitialCreate5.designer.cs">
       <DependentUpon>202306111839216_InitialCreate5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202306121438459_InitialCreate6.cs" />
+    <Compile Include="Migrations\202306121438459_InitialCreate6.designer.cs">
+      <DependentUpon>202306121438459_InitialCreate6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Weather.cs" />
@@ -267,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202306111839216_InitialCreate5.resx">
       <DependentUpon>202306111839216_InitialCreate5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306121438459_InitialCreate6.resx">
+      <DependentUpon>202306121438459_InitialCreate6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

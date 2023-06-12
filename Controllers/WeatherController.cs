@@ -58,19 +58,26 @@ namespace Search_Weather.Controllers
         }
 
         [HttpPost]
+                [ValidateAntiForgeryToken]
         public ActionResult GetWeather(string cityName)
         {
-
+        
             Session["Data"] = null;
 
-            var data = cities.Where(c => c.CityName == cityName.ToLower()).ToList(); 
-            
+            var data = cities.Where(c => c.CityName == cityName.ToLower()).ToList();
+
+            if (data == null)
+            {
+                ViewBag.error = "City does not exist in database.";
+            }
+
             Session["Data"] = data.FirstOrDefault();
 
             TempData["CityDetails"] = data.FirstOrDefault();
 
-   
             return RedirectToAction("Results");
+
+
         }
 
         string Baseurl = "https://api.openweathermap.org/";
